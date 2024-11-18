@@ -1,0 +1,21 @@
+[
+    {
+        "title": "tutorial belajar JavaScript",
+        "tags": ["React", "Frontend"],
+        "date": "2022-01-01",
+        "isNew": true
+    },
+        {
+        "title": "meningkatkan performa di react JavaScript",
+        "tags": ["React", "Frontend"],
+        "date": "2022-01-02",
+        "isNew": false
+
+    },
+    {
+        "title": "Cara menggunakan cakra UI di react JS",
+        "tags": ["React", "CSS"],
+        "date": "2022-01-03",
+        "isNew": false
+    }
+]
