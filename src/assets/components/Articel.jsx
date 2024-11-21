@@ -14,7 +14,7 @@ function Articel(props) {
                 <ArticleStatus isNew={props.isNew}/>
             </small>
             <div>
-                <small>ditulis oleh {user.username} </small>
+                <small>ditulis oleh {user?.username} </small>
             </div>
         </>
 
