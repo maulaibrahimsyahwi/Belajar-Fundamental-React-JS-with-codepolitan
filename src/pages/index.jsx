@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import postsData from "../posts.json";
-import Articel from "../assets/components/articel";
+import Articel from "../assets/components/Articel";
 import Search from "../assets/components/Search";
 function Homepage() {
     const [posts, setPosts] = useState(postsData);
