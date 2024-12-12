@@ -1,21 +1,37 @@
 import { createBrowserRouter } from "react-router-dom";
-import Rootslayouts from "../layouts/Rootslayouts";
-import Home from "../pages";
-import About from "../pages/about";
+import RootLayout from "../layouts/RootsLayout";
+import Home from "../pages/Index";
+import Blog from "../pages/blogs";
+import Post from "../pages/blogs/_id";
+import About from "../pages/About";
 
-export const router = createBrowserRouter ([
-    {
+import ErrorPage from "../components/ErrorPage";
+import { posts, postById } from "../apis/loaders";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/",
-        element: <Rootslayouts></Rootslayouts>, 
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>
-            },
-            {
-                path: "/about",
-                element: <About></About>
-            }
-        ]
-    }
+        element: <Home />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+        loader: posts,
+      },
+      {
+        path: "/blog/:id",
+        element: <Post />,
+        loader: postById,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
 ]);

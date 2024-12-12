@@ -1,5 +1,5 @@
-function About () {
-    return <div>INI HALAMAN ABOUT</div>
-}
-
-export default About;
+function About() {
+    return <div>Ini halaman about</div>;
+  }
+  
+  export default About;
